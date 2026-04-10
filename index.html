@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gesture Email Classifier</title>
+  </head>
+  <body style="margin: 0; background: #111; display: flex; flex-direction: row; height: 100vh;">
+    <div style="position: relative; width: 50%; height: 100%;">
+      <video
+        id="input-video"
+        style="width: 100%; height: 100%; object-fit: cover; transform: scaleX(-1);"
+        autoplay
+        muted
+        playsinline
+      ></video>
+      <canvas
+        id="overlay"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; transform: scaleX(-1);"
+      ></canvas>
+    </div>
+    <div
+      id="app"
+      style="width: 50%; height: 100%; overflow-y: auto; padding: 1rem; box-sizing: border-box; color: white;"
+    ></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
